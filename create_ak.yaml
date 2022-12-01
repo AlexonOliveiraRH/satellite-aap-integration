@@ -1,0 +1,33 @@
+---
+- hosts: "{{ satelliteserver }}"
+  gather_facts: yes
+  tasks:
+
+    - name: "Create an activation key for RHEL 9 base servers"
+      redhat.satellite.activation_key:
+        username: "admin"
+        password: "admin"
+        server_url: "https://satellite.example.local"
+        name: "{{ AK_NAME }}"
+        organization: "{{ ORG_NAME | default('EXAMPLE_ORG') }}"
+        lifecycle_environment: "{{ LE_NAME | default('Library') }}"
+        content_view: "{{ CV_NAME | default('') }}"
+        host_collections:
+            - "{{ HC_NAME | default('HC-RHEL9') }}"
+        subscriptions:
+          - name: "{{ SUB_NAME | default('Employee SKU') }}"
+        content_overrides:
+            - label: ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
+              override: enabled
+            - label: rhel-9-for-x86_64-appstream-rpms
+              override: enabled
+            - label: rhel-9-for-x86_64-baseos-rpms
+              override: enabled
+            - label: rhel-9-for-x86_64-supplementary-rpms
+              override: enabled
+            - label: satellite-client-6-for-rhel-9-x86_64-rpms
+              override: enabled
+        auto_attach: True
+        release_version: "{{ _NAME | default('9') }}"
+        service_level: "{{ _NAME | default('') }}"
+...

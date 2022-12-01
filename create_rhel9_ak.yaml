@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ satelliteserver }}"
+- hosts: "{{ SAT_NAME }}"
   gather_facts: yes
   tasks:
 
@@ -7,7 +7,7 @@
       redhat.satellite.activation_key:
         username: "admin"
         password: "admin"
-        server_url: "https://satellite.example.local"
+        server_url: "{{ SAT_URL | default('https://satellite.example.local') }}"
         name: "{{ AK_NAME }}"
         organization: "{{ ORG_NAME | default('EXAMPLE_ORG') }}"
         lifecycle_environment: "{{ LE_NAME | default('Library') }}"
@@ -28,6 +28,6 @@
             - label: satellite-client-6-for-rhel-9-x86_64-rpms
               override: enabled
         auto_attach: True
-        release_version: "{{ _NAME | default('9') }}"
-        service_level: "{{ _NAME | default('') }}"
+        release_version: "{{ REL_NAME | default('9') }}"
+        service_level: "{{ SL_NAME | default('') }}"
 ...

@@ -7,15 +7,15 @@
       redhat.satellite.activation_key:
         username: "admin"
         password: "admin"
-        server_url: "{{ SAT_URL | default('https://satellite.example.local') }}"
+        server_url: "{{ SAT_URL }}"
         name: "{{ AK_NAME }}"
-        organization: "{{ ORG_NAME | default('EXAMPLE_ORG') }}"
-        lifecycle_environment: "{{ LE_NAME | default('Library') }}"
-        content_view: "{{ CV_NAME | default('') }}"
+        organization: "{{ ORG_NAME }}"
+        lifecycle_environment: "{{ LE_NAME }}"
+        content_view: "{{ CV_NAME }}"
         host_collections:
-            - "{{ HC_NAME | default('HC-RHEL9') }}"
+            - "{{ HC_NAME }}"
         subscriptions:
-          - name: "{{ SUB_NAME | default('Employee SKU') }}"
+          - name: "{{ SUB_NAME }}"
         content_overrides:
             - label: ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
               override: enabled
@@ -28,6 +28,6 @@
             - label: satellite-client-6-for-rhel-9-x86_64-rpms
               override: enabled
         auto_attach: True
-        release_version: "{{ REL_NAME | default('9') }}"
-        #service_level: "{{ SL_NAME | default('Standard') }}"
+        release_version: "{{ REL_NAME }}"
+        service_level: "{{ SL_NAME }}"
 ...

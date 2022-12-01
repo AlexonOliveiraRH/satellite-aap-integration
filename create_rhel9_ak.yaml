@@ -14,8 +14,6 @@
         content_view: "{{ CV_NAME }}"
         host_collections:
             - "{{ HC_NAME }}"
-        subscriptions:
-          - name: "{{ SUB_NAME }}"
         content_overrides:
             - label: ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
               override: enabled
@@ -27,7 +25,7 @@
               override: enabled
             - label: satellite-client-6-for-rhel-9-x86_64-rpms
               override: enabled
-        auto_attach: True
+        auto_attach: False
         release_version: "{{ REL_NAME }}"
         service_level: "{{ SL_NAME }}"
 ...

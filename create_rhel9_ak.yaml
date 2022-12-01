@@ -29,5 +29,5 @@
               override: enabled
         auto_attach: True
         release_version: "{{ REL_NAME | default('9') }}"
-        service_level: "{{ SL_NAME | default('Standard') }}"
+        #service_level: "{{ SL_NAME | default('Standard') }}"
 ...

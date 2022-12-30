@@ -201,6 +201,52 @@
            "swift-proxy-server"
            ],
         "new_question": true
+        },
+        {
+        "question_name": "Select the products",
+        "question_description": "",
+        "required": false,
+        "type": "multiplechoice",
+        "variable": "PROD_NAME",
+        "min": 0,
+        "max": 1024,
+        "default": "",
+        "choices": [
+           "Cinderlib",
+           "dotNET on RHEL (for RHEL Server)",
+           "EPEL7_Repo",
+           "EPEL8_Repo",
+           "EPEL9_Repo",
+           "JBoss Enterprise Application Platform",
+           "OpenShift Developer Tools and Services",
+           "OSP16.1 Containers",
+           "Red Hat Ansible Automation Platform",
+           "Red Hat Ansible Collections",
+           "Red Hat Ansible Engine",
+           "Red Hat Ceph Storage MON",
+           "Red Hat Ceph Storage OSD",
+           "Red Hat CloudForms",
+           "Red Hat CodeReady Linux Builder for x86_64",
+           "Red Hat Developer Tools (for RHEL Server)",
+           "Red Hat Directory Server",
+           "Red Hat Enterprise Linux Advanced Virtualization",
+           "Red Hat Enterprise Linux Fast Datapath",
+           "Red Hat Enterprise Linux for Real Time",
+           "Red Hat Enterprise Linux for x86_64",
+           "Red Hat Enterprise Linux for x86_64 - Extended Update Support",
+           "Red Hat Enterprise Linux High Availability for x86_64",
+           "Red Hat Enterprise Linux High Availability for x86_64 - Extended Update Support",
+           "Red Hat Enterprise Linux Resilient Storage for x86_64",
+           "Red Hat Enterprise Linux Server",
+           "Red Hat OpenStack",
+           "Red Hat Satellite",
+           "Red Hat Single Sign-On",
+           "Red Hat Software Collections (for RHEL Server)",
+           "Red Hat Virtualization",
+           "Red Hat Virtualization Host",
+           "Red Hat Virtualization Manager"
+           ],
+        "new_question": true
         }
     ]
 }

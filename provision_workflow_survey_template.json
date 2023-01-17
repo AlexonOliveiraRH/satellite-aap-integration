@@ -1,0 +1,127 @@
+{
+    "name": "",
+    "description": "",
+    "spec": [
+        {
+            "question_name": "Select the Satellite server",
+            "question_description": "",
+            "required": true,
+            "type": "multiplechoice",
+            "variable": "SAT_NAME",
+            "min": 0,
+            "max": 1024,
+            "new_question": false,
+            "default": "satellite.example.local",
+            "choices": [
+                "satellite.example.local",
+                ""
+            ]
+        },
+        {
+            "question_name": "Specify the Satellite user",
+            "question_description": "",
+            "required": true,
+            "type": "text",
+            "variable": "SAT_USER",
+            "min": 0,
+            "max": 1024,
+            "default": "",
+            "choices": "",
+            "new_question": true
+        },
+        {
+            "question_name": "Specify the Satellite user password",
+            "question_description": "",
+            "required": true,
+            "type": "text",
+            "variable": "SAT_PASS",
+            "min": 0,
+            "max": 1024,
+            "default": "",
+            "choices": "",
+            "new_question": true
+        },
+        {
+            "question_name": "Select the Satellite server URL",
+            "question_description": "",
+            "required": true,
+            "type": "multiplechoice",
+            "variable": "SAT_URL",
+            "min": 0,
+            "max": 1024,
+            "new_question": false,
+            "default": "https://satellite.example.local",
+            "choices": [
+                "https://satellite.example.local"
+            ]
+        },
+        {
+            "question_name": "Select the Organization",
+            "question_description": "",
+            "required": true,
+            "type": "multiplechoice",
+            "variable": "ORG_NAME",
+            "min": 0,
+            "max": 1024,
+            "new_question": false,
+            "default": "EXAMPLE_ORG",
+            "choices": [
+                "EXAMPLE_ORG"
+            ]
+        },
+        {
+            "question_name": "Select the Location",
+            "question_description": "",
+            "required": true,
+            "type": "multiplechoice",
+            "variable": "LOCAL_NAME",
+            "min": 0,
+            "max": 1024,
+            "default": "EXAMPLE_LOCAL",
+            "choices": [
+                "EXAMPLE_LOCAL"
+            ],
+            "new_question": true
+        },
+        {
+            "question_name": "Select the HostGroup",
+            "question_description": "",
+            "required": true,
+            "type": "multiplechoice",
+            "variable": "HG_NAME",
+            "min": 0,
+            "max": 1024,
+            "default": "HG-CALLBACK",
+            "choices": [
+                "HG-CALLBACK",
+                "HG-RHEL9",
+                "HG-RHEL8"
+            ],
+            "new_question": true
+        },
+        {
+            "question_name": "Type the Hostname (Simple)",
+            "question_description": "",
+            "required": true,
+            "type": "text",
+            "variable": "HOST_NAME",
+            "min": 0,
+            "max": 1024,
+            "default": "",
+            "choices": "",
+            "new_question": false
+        },
+        {
+            "question_name": "Type the host's IP (Last Octet)",
+            "question_description": "",
+            "required": true,
+            "type": "text",
+            "variable": "HOST_IP",
+            "min": 0,
+            "max": 1024,
+            "default": "",
+            "choices": "",
+            "new_question": false
+        }
+    ]
+}

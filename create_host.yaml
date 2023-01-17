@@ -73,10 +73,10 @@
         username: "{{ SAT_USER }}"
         password: "{{ SAT_PASS }}"
         server_url: "{{ SAT_URL }}"
-        name: "{{ HOST_NAME }}.example.local"
         organization: "{{ ORG_NAME }}"
         location: "{{ LOCAL_NAME }}"
         hostgroup: "{{ HG_NAME }}"
+        name: "{{ HOST_NAME }}.example.local"
         compute_attributes:
           start: "1"
         interfaces_attributes:

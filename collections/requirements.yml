@@ -1,3 +1,0 @@
-# Collection Required by the Slack Notify Playbook
-collections:
-  - community.general

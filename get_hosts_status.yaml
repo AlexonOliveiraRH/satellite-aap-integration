@@ -11,7 +11,7 @@
   - name: "Show Errata Counts"
     debug:
       msg: >
-        Bug fixes: {{ foreman.content_facet_attributes.errata_counts.bugfix }},
-        Security: {{ foreman.content_facet_attributes.errata_counts.security }},
-        Enhancement: {{ foreman.content_facet_attributes.errata_counts.enhancement }},
-        Total: {{ foreman.content_facet_attributes.errata_counts.total }}
+        Bug fixes: {{ foreman.content_attributes.errata_counts.bugfix }},
+        Security: {{ foreman.content_attributes.errata_counts.security }},
+        Enhancement: {{ foreman.content_attributes.errata_counts.enhancement }},
+        Total: {{ foreman.content_attributes.errata_counts.total }}

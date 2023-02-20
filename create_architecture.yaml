@@ -1,0 +1,14 @@
+---
+- hosts: "{{ SAT_NAME }}"
+  gather_facts: yes
+  tasks:
+
+    - name: "Create an Architecture"
+      redhat.satellite.architecture:
+        name: "{{ OS_ARCH }}"
+        operatingsystems: "{{ OS_NAME | join(',') }}"
+        server_url: "{{ SAT_URL }}"
+        username: "{{ SAT_USER }}"
+        username: "{{ SAT_PASS }}"
+        state: present
+...

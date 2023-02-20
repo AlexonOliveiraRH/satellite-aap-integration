@@ -1,0 +1,36 @@
+---
+- hosts: "{{ SAT_NAME }}"
+  gather_facts: yes
+  tasks:
+
+    - name: "Create an Activation Key with Repositories"
+      redhat.satellite.activation_key:
+        username: "{{ SAT_USER }}"
+        username: "{{ SAT_PASS }}"
+        server_url: "{{ SAT_URL }}"
+        name: "{{ AK_NAME }}"
+        organization: "{{ ORG_NAME }}"
+        lifecycle_environment: "{{ LE_NAME }}"
+        content_view: "{{ CV_NAME }}"
+        host_collections:
+            - "{{ HC_NAME }}"
+        content_overrides:
+            - label: EXAMPLE_ORG_EPEL7_Repo_EPEL7_Repo
+              override: disabled
+            - label: EXAMPLE_ORG_EPEL8_Repo_EPEL8_Repo
+              override: disabled
+            - label: EXAMPLE_ORG_EPEL9_Repo_EPEL9_Repo
+              override: disabled
+            - label: rhel-7-server-rpms
+              override: disabled
+            - label: rhel-8-for-x86_64-appstream-rpms
+              override: disabled
+            - label: rhel-8-for-x86_64-baseos-rpms
+              override: disabled
+            - label: "{{ item }}"
+              override: enabled
+        auto_attach: False
+        release_version: "{{ REL_NAME }}"
+        service_level: "{{ SL_NAME }}"
+      loop: "{{ REP_NAME }}"
+...

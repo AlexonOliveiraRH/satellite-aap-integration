@@ -1,0 +1,22 @@
+---
+- hosts: "{{ SAT_NAME }}"
+  gather_facts: yes
+  tasks:
+
+  - name: "Create libvirt compute resource"
+    redhat.satellite.compute_resource:
+      username: "{{ SAT_USER }}"
+      username: "{{ SAT_PASS }}"
+      server_url: "{{ SAT_URL }}"
+      name: "{{ CR_NAME }}"
+      description: "{{ OP_DESC }}"
+      locations:
+        - "{{ LOC_NAME }}"
+      organizations:
+        - "{{ ORG_NAME }}"
+      provider: libvirt
+      provider_params:
+        url: "qemu+ssh://root@{{ CR_URL }}/system"
+        display_type: spice
+      state: present
+...

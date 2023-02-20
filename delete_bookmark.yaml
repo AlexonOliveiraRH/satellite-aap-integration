@@ -1,0 +1,14 @@
+---
+- hosts: "{{ SAT_NAME }}"
+  gather_facts: yes
+  tasks:
+
+  - name: "Create or Update a Bookmark"
+    redhat.satellite.bookmark:
+      username: "{{ SAT_USER }}"
+      username: "{{ SAT_PASS }}"
+      server_url: "{{ SAT_URL }}"
+      name: "{{ BK_NAME }}"
+      controller: "job_invocations"
+      state: absent
+...

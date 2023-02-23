@@ -9,6 +9,6 @@
         operatingsystems: "{{ OS_NAME | join(',') }}"
         server_url: "{{ SAT_URL }}"
         username: "{{ SAT_USER }}"
-        username: "{{ SAT_PASS }}"
+        password: "{{ SAT_PASS }}"
         state: present
 ...

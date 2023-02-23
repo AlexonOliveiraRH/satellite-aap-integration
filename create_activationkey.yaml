@@ -6,7 +6,7 @@
     - name: "Create an Activation Key with Repositories"
       redhat.satellite.activation_key:
         username: "{{ SAT_USER }}"
-        username: "{{ SAT_PASS }}"
+        password: "{{ SAT_PASS }}"
         server_url: "{{ SAT_URL }}"
         name: "{{ AK_NAME }}"
         organization: "{{ ORG_NAME }}"

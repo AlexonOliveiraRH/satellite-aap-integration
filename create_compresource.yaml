@@ -6,7 +6,7 @@
   - name: "Create libvirt compute resource"
     redhat.satellite.compute_resource:
       username: "{{ SAT_USER }}"
-      username: "{{ SAT_PASS }}"
+      password: "{{ SAT_PASS }}"
       server_url: "{{ SAT_URL }}"
       name: "{{ CR_NAME }}"
       description: "{{ OP_DESC }}"

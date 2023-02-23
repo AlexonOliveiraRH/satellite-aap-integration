@@ -8,6 +8,6 @@
         name: "{{ OS_ARCH }}"
         server_url: "{{ SAT_URL }}"
         username: "{{ SAT_USER }}"
-        username: "{{ SAT_PASS }}"
+        password: "{{ SAT_PASS }}"
         state: absent
 ...

@@ -6,7 +6,7 @@
    - name: "Create or Update Content View"
      redhat.satellite.content_view:
        username: "{{ SAT_USER }}"
-       username: "{{ SAT_PASS }}"
+       password: "{{ SAT_PASS }}"
        server_url: "{{ SAT_URL }}"
        name: "{{ CV_NAME }}"
        organization: "{{ ORG_NAME }}"
